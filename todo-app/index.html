@@ -5,18 +5,38 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Angular To Do App</title>
+<!-- stylesheet -->
+<link rel=stylesheet href="style.css">
+
+<!-- Angular Library -->
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
 </head>
 <body>
-	<!-- Angular Library -->
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
-	<script>
+	<div ng-controller="todoController">
+		<form name="frm" ng-submit="addTodo()" ng-model="newtodo" required />
+			<input type="text" name="newtodo">
+			<button ng-disabled="frm.$invalid">GO</button>
+		</form>
+			<button ng-click="clearCompleted()">Clear Completed</button>
 
-		angular.module('ToDo', []).
-		controller('todoController', ['$scope', function($scope){
-			$scope
+	</div>
+
+
+ 
+
+
+<script>
+
+angular.module('ToDo', []).
+controller('todoController', ['$scope', function($scope){
+	$scope.todos = [
+		{'title':'Build a todo app','done':false}
+	];
 			
-		}])
+	$scope.addtodo = function(){}
+	$scope.clearCompleted = function(){}
+}])
 
-	</script>
+</script>
 </body>
 </html>
