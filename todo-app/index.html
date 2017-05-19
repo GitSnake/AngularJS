@@ -9,9 +9,13 @@
 	<link rel=stylesheet href="style.css">
 </head>
 <body>
-<div>
-	
-</div>
+	<div ng-controller="todoController">
+		<form name="frm" ng-submit="addTodo()">
+			<input type="text" name="newto" ng-model="newtodo" required />
+			<button ng-disabled="frm.$invalid">GO</button>
+		</form>
+		<button ng-click="clearCompleted()">Clear Completed</button>
+	</div>
 
 
 
@@ -26,7 +30,7 @@
 			{'title':'Build a todo app','done':false}
 		];
 
-		$scope.addtodo = function(){}
+		$scope.addTodo = function(){}
 		$scope.clearCompleted = function(){}
 
 	}])
@@ -47,7 +51,7 @@
 
 
 	<div ng-controller="todoController">
-		<form name="frm" ng-submit="addTodo()" ng-model="newtodo" required />
+		<form name="frm" ng-submit="addTodo()">ng-include src="" scope="" onload=""></ng-include> ng-model="newtodo" required />
 			<input type="text" name="newtodo">
 			<button ng-disabled="frm.$invalid">GO</button>
 		</form>
