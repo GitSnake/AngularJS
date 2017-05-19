@@ -5,13 +5,29 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Angular To Do App</title>
-<!-- stylesheet -->
-<link rel=stylesheet href="style.css">
-
-<!-- Angular Library -->
-<script src="https://opensource.keycdn.com/angularjs/1.6.2/angular.min.js"></script>
+	<!-- stylesheet -->
+	<link rel=stylesheet href="style.css">
 </head>
 <body>
+	<!-- Angular Library -->
+	<script src="https://opensource.keycdn.com/angularjs/1.6.2/angular.min.js"></script>
+<script>
+	
+	angular.module('ToDo', []).
+	controller('todoController', ['$scope', function ($scope) {
+		$scope.todos = [
+			{'title':'Build a todo app','done':false}
+		]
+	}])
+
+
+</script>
+
+
+
+
+
+
 	<div ng-controller="todoController">
 		<form name="frm" ng-submit="addTodo()" ng-model="newtodo" required />
 			<input type="text" name="newtodo">
