@@ -4,3 +4,6 @@ input{
 	padding:5px;
 	font-size: 15px;
 }
+.done{
+	text-decoration: line-through; color: #ccc;
+}
