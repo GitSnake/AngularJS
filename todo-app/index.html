@@ -9,16 +9,34 @@
 	<link rel=stylesheet href="style.css">
 </head>
 <body>
+<div>
+	
+</div>
+
+
+
+
 	<!-- Angular Library -->
 	<script src="https://opensource.keycdn.com/angularjs/1.6.2/angular.min.js"></script>
 <script>
 	
-	angular.module('ToDo', []).
-	controller('todoController', ['$scope', function ($scope) {
+	angular.module('ToDo',[]).
+	controller('todoController',['$scope',function($scope) {
 		$scope.todos = [
 			{'title':'Build a todo app','done':false}
-		]
+		];
+
+		$scope.addtodo = function(){}
+		$scope.clearCompleted = function(){}
+
 	}])
+
+
+
+		todos.push({'title':$scope.newTodo,'done':false})
+		$scope.newTodo = ''
+	}
+
 
 
 </script>
