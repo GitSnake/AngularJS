@@ -37,7 +37,12 @@ controller('todoController', ['$scope', function($scope){
 		{'title':'Build a todo app','done':false}
 	];
 			
-	$scope.addtodo = function(){}
+	$scope.addtodo = function(){
+		$scope.todos.push({'title':$scope.newtodo,'done':false})
+
+
+
+	}
 	$scope.clearCompleted = function(){}
 }])
 
