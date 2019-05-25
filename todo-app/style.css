@@ -1,0 +1,11 @@
+/*
+input{
+	display: block;
+	margin: 0 auto;
+	padding:5px;
+	font-size: 15px;
+}
+*/
+.done{
+	text-decoration: line-through; color: #ccc;
+}

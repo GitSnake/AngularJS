@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html ng-app>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>AngularJS For Everyone</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+		<link rel="stylesheet" href="#">
+	</head>
+	<body ng-init="list = [{name:'Scott', age: 29},{name:'Courtney', age:29}]">
+		<ul>
+			<li ng-repeat="item in list">
+				{{item.name}} - <span>{{item.age}}
+			</li>
+		</ul>
+	</body>
+</html>
